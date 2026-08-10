@@ -1,0 +1,8 @@
+// Arithmetic operators : +, -, *, /, %
+
+Precedence,         Operators,          Associativity
+Highest,           "* , / , %",         Left to right
+Lowest,             "+ , -",            Left to right
+
+~ operators with higher precedence will execute first,
+then if the precedence is same then, associativity -> leftmost first

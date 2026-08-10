@@ -1,0 +1,4 @@
+Structure is a user defined data type that can be used to group elements of different data types into a 
+single type.
+
+** USER DEFINED DATA TYPE **

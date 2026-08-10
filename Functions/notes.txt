@@ -1,0 +1,5 @@
+Arguments/ Actual parameter -> values inserted when the function is called in the main code 
+Parameters/ Formal Parameters -> names declared at the function definition 
+
+
+

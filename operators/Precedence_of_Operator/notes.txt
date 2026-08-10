@@ -1,0 +1,3 @@
+Precendence & Associativity 
+Precendence = Levels (Higher the level , higher the priority of evaluating)
+Associativity = Sequence in which same Precendence operators would be evaluated 

@@ -1,0 +1,13 @@
+This folder is about local and global variables 
+
+local scope is inside only a function ; main() ; temp() like this 
+by default every local variable value would be zero. 
+but a global scope varible is  throughout the file, and it's by default value is zero 
+
+EXTERN
+~by default every var is auto ; varible would be destroyed after function ends 
+~we change this by using extern 
+~it only declare a variable and not define
+~extern asks compiler to go out of the scope to search the value of the var 
+~extern int a ; writing this many times in code will not give an error but 
+~int a = 5 writing this with different values will give an error because we are defining it multiple times 

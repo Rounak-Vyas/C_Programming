@@ -1,0 +1,10 @@
+A Better Definition
+
+Many textbooks define dynamic memory allocation as:
+"Memory allocated at run time."
+
+That's true, but incomplete.
+A more accurate definition is:
+
+Dynamic memory allocation is the process of requesting memory from the heap during program execution, 
+where the program controls when the memory is allocated and when it is released.

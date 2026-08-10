@@ -1,0 +1,5 @@
+A useful way to diagnose errors is:
+1. If the message mentions C syntax, keywords, types, or declarations (expected, invalid, storage class, unknown type), 
+    it's almost always a compiler error.
+2. If the message says undefined reference, multiple definition, or similar, your code compiled successfully—the 
+    problem is in the linking stage, where separate compiled files are being connected.

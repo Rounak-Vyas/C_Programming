@@ -1,0 +1,12 @@
+Another program to delete a certain node from the linked list 
+*ASSUMPTION* : there is a pointer Q which is already pointing to that node 
+in the case , the best code function is given below which has a time complexity of O(1);
+
+struct node* temp = Q -> link;
+Q->data = temp->data;
+Q->link = temp->link;
+free(temp);
+temp = NULL;
+
+
+// not work to delete the last node 

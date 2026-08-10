@@ -1,0 +1,14 @@
+any variable that is global, even if we do not initialize it (give it a value), it would be always set as zero by deafult 
+
+however the same does not happen for local variables, most of the times they store garbage value until initialized
+
+#include <stdio.h>
+
+int x; 
+int main (){
+    int y;
+    printf("%d, %d", x,y); 
+}
+
+// x -> 0 printed 
+// y -> any random garbage value

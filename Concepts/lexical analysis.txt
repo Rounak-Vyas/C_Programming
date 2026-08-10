@@ -1,0 +1,14 @@
+Token Generation in C
+Lexical Analysis: This is the very first phase of the compilation process.
+
+The Lexical Analyzer (Scanner): It scans the entire source program. When it identifies a meaningful sequence of characters (known as lexemes), it converts that sequence into a token.
+
+What is a Token? A token consists of lexemes mapped into a specific token-name and an attribute-value.
+
+Example: The statement int is mapped as <keyword, int>.
+
+The Longest Match Rule: During this process, the lexical analyzer always matches the longest possible character sequence to form a valid token.
+
+Example from the Screen:
+For the expression int a = 5 ;, the analyzer breaks it down into individual tokens like so:
+| int | | a | | = | | 5 | | ; |

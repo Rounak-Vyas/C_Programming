@@ -1,0 +1,30 @@
+array size and initialization are part of the declaration.
+After an array is created, you cannot assign values to the whole array using {}.\
+
+int arr[5];          // Array created
+arr = {1,2,3,4,5};   // ❌ Not allowed
+
+But if accessed one by one , then it could be declared and then defined later only if size is defined along
+Ex: 
+    int arr[5];
+    for (int i = 0; i<5;i++){    // values filled like a[0]; a[1]; a[2]; a[3];
+        scanf("%d",&arr[i]);
+    }
+
+_________
+
+-> If the number of elements inserted is less than the size defined , then the remaining space would be filled via zero 
+_________
+
+Variable Length Array : Size decided at the time of run time
+int arr [n]; -> user will enter the value n 
+Rules: 
+    1. We can't initialize a VLA
+        int a[] = {0};  Not allowed  (size and elements would all be user defined);
+    2. we can't use static keyword with the VLA
+        static int arr[] -> generate an error
+The memory is assigned at the run time yet its not a dynamic memory allocation , its a special stack arrangement 
+defined after c99 , VLA 
+_________
+//* ARRAY can't be returned from function *
+_________

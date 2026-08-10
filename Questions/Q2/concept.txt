@@ -1,0 +1,27 @@
+Explanation
+To understand why the output is 0, we need to break down how the C compiler handles the scope and linkage of the static variables in this code.
+
+1. Global (File Scope) Declarations
+C
+static int i;       // Tentative definition (initialized to 0 by default)
+static int i = 27;  // Actual definition (initialized to 27)
+static int i;       // Another tentative definition
+In C, you are allowed to have multiple tentative definitions of a global static variable within the same file, as long as their types match and there is at most one explicit initialization.
+
+The compiler resolves all of these into a single global variable i allocated in the data segment, initialized to 27.
+
+2. Local (Block Scope) Declaration
+C
+int main() {
+    static int i;   // Local static variable
+    printf("%d", i);
+    return 0;
+}
+Inside main(), a new variable named i is declared with the static modifier.
+
+Scope Masking (Shadowing): This local variable i overrides or "shadows" the global variable i inside the block of the main function. Therefore, any reference to i inside main() points to this local variable, not the global one (the global value of 27 is ignored here).
+
+Default Initialization: Local static variables that are not explicitly initialized are automatically initialized to 0 by the compiler at program startup.
+
+Conclusion
+Because the printf statement references the local static int i, which defaults to 0, the program prints 0.

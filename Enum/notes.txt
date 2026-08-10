@@ -1,0 +1,20 @@
+/*More on ENUMS 
+1. Could be declared in a local scope 
+2. Automatically initialized by compiler if no value is defined 
+Rules :
+1. two names can have same value , {red = 0,blue = 0}
+2.assign values in any order.
+3. Unassigned names will get values previous value+1
+4. Only integral Values are allowed 
+5. Must be unique in their scope 
+    int main () {
+    enum point1 {x,y,z};
+    enum point2 {x,a,b};   // Not allowed , in main scope there could only be one enum x 
+    }
+
+**The biggest difference**
+Structure : Groups different variables together.
+Union: Stores different variables in the same memory.
+Enum: Represents one choice from a fixed set of integer constants.
+
+Most Useful in Embedded C

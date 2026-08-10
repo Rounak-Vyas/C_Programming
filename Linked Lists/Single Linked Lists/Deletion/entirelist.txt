@@ -1,0 +1,15 @@
+struct node* del_list(struct node *head)
+{
+    struct node *temp = head;
+
+    while(temp != NULL)
+    {
+        temp = temp->link;
+        free(head);
+        head = temp;
+    }
+    return head;
+}
+
+note : update the head pointer after making it free , so to delete the current node , use temp as traversing or
+vice versa 
