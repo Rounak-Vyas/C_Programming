@@ -6,16 +6,28 @@ int arr[MAX];
 int front=-1,last=-1;
 
 void enqueue(int data);
-void dequeue();
+int dequeue();
 void print();
+void peek();
 
 int main(){
-    enqueue(1);enqueue(2);enqueue(3);
+    int poped_value;
     print();
+    poped_value=dequeue();
+    enqueue(1);enqueue(2);enqueue(3);enqueue(1);enqueue(2);
+    print();
+    enqueue(3);
+    poped_value=dequeue();
+    printf("Popped value is: %d\n",poped_value);
+    print();
+
+    //THE DRAWBACK of QUEUE
+    enqueue(5);  // Even if i have nowdequed one element, i am not able to add another, cuz the first and last pointers are already pointing to the last element of the list. 
+    peek();
     dequeue();
-    print();
+    peek();
+    dequeue();dequeue();dequeue();dequeue();
     return 0;
-    
 }
 
 void enqueue (int data){
@@ -25,7 +37,7 @@ void enqueue (int data){
     }
     else if(last==MAX-1) {
         printf("Queue is full\n") ;
-        exit(1);
+        return;
     }
     else{
         last++;
@@ -34,19 +46,36 @@ void enqueue (int data){
     
 }
 
-void dequeue(){
-    if(front==-1|| front>last){
-        printf("Queue is Empty");
-        exit(1);
+int dequeue(){
+    int value;  // alternate code 
+    if(front==-1 || front>last){ // front == last 
+        printf("Queue Underflow\n");// front = last = -1  // resets the queue position
+        return 0;
     }
     else{
+        value = arr[front];
         front++;
+        return value;
     }
 }
 
 void print(){ 
+    if(front==-1){
+        printf("Queue is empty\n");
+        return;
+    }
     for(int i=front;i<=last;i++){
         printf("%d ",arr[i]);
     }
     printf("\n");
+}
+
+void peek(){
+    if(front==-1 || front==MAX ){
+        printf("No elements in the queue\n");
+    }
+    else{
+        printf("The first element is: %d\n",arr[front]);
+
+    }
 }
