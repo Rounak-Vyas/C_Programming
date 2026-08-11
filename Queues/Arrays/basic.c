@@ -13,7 +13,7 @@ void peek();
 int main(){
     int poped_value;
     print();
-    poped_value=dequeue();
+    dequeue();
     enqueue(1);enqueue(2);enqueue(3);enqueue(1);enqueue(2);
     print();
     enqueue(3);
@@ -26,7 +26,8 @@ int main(){
     peek();
     dequeue();
     peek();
-    dequeue();dequeue();dequeue();dequeue();
+    dequeue();dequeue();dequeue();
+    print();
     return 0;
 }
 
@@ -60,7 +61,7 @@ int dequeue(){
 }
 
 void print(){ 
-    if(front==-1){
+    if(front==-1 || front==MAX){
         printf("Queue is empty\n");
         return;
     }
