@@ -85,7 +85,7 @@ void print(){
         printf("Queue is Empty\n");
         return;
     }
-    do{
+    do{                              // Another approach: temp=front; while(temp->next!=front); after completion printcd read->data
         printf("%d ", temp->data);
         temp=temp->link;
     }while(temp!=front);

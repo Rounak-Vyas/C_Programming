@@ -22,7 +22,7 @@ int main(){
     print();
 
     //THE DRAWBACK of QUEUE
-    enqueue(5);  // Even if i have nowdequed one element, i am not able to add another, cuz the first and last pointers are already pointing to the last element of the list. 
+    enqueue(5);  // Even if i have now dequed one element, i am not able to add another, cuz the first and last pointers are already pointing to the last element of the list. 
     peek();
     dequeue();
     peek();
@@ -50,7 +50,7 @@ void enqueue (int data){
 int dequeue(){
     int value;  // alternate code 
     if(front==-1 || front>last){ // front == last 
-        printf("Queue Underflow\n");// front = last = -1  // resets the queue position
+        printf("Queue Underflow\n");// front = last = -1  // resets the queue position 
         return 0;
     }
     else{

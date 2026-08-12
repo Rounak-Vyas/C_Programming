@@ -67,8 +67,8 @@ void print(){
         printf("Queue is empty\n");
         return;
     }
-    else{
-        while(i!=rear){
+    else{    
+        while(i!=rear){      // in place a do while could also be used, to avoid writing last element after loop
             printf("%d ",arr[i]);
             i=(i+1)%max;
         }
