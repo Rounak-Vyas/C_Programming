@@ -52,7 +52,11 @@ void dequeue(){
     node *temp= first;
     first=first->link;
     free(temp);
-    temp==NULL;
+    temp=NULL;
+
+    if(first==NULL){
+        last=NULL;
+    }
 }
 
 void print(){
