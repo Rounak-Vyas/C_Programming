@@ -15,7 +15,8 @@ void deque();
 void print();
 
 int main(){
-    enque(1);enque(2);enque(3);enque(4);enque(5);
+    enque(1);print();
+    enque(2);enque(3);enque(4);enque(5);
     print();
     deque();
     print();
@@ -63,7 +64,7 @@ void deque(){
 
 void print(){ 
     int i=front;
-    if(front==-1 || front==rear){
+    if(front==-1){
         printf("Queue is empty\n");
         return;
     }
