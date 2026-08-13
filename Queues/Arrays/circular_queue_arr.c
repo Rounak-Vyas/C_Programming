@@ -68,8 +68,8 @@ void print(){
         printf("Queue is empty\n");
         return;
     }
-    else{    // DO WHILE CAN'T BE USED, INITIAL CONDITION FALSE,(See commented print code in cirarrDEQ.c)
-        while(i!=rear){      
+    else{    
+        while(i!=rear){      // in place a do while could also be used, to avoid writing last element after loop
             printf("%d ",arr[i]);
             i=(i+1)%max;
         }
@@ -77,8 +77,3 @@ void print(){
     }
     printf("\n");
 }
-
-/*Do while Loop Explanation:
-Suppose front==rear; temp =front; do print and increase temp
-No temp tress paas the rear pointer as well , hence it circulates again till it reaches the rear
-It worked with Linked Lists, bcz there we are actually making the memory free, */
