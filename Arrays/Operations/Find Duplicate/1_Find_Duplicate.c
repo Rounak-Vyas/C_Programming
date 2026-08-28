@@ -1,3 +1,5 @@
+// Extra space and changing of array not allowed -> Brute force solution is the only solution 
+
 #include <stdio.h>
 
 int find_duplicate(int arr[], int n) {

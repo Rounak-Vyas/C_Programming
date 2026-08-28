@@ -1,3 +1,7 @@
+/*
+Floyd's Cycle Detection Algorithm - Tortoise and Hare algorithm.
+Time Complexity -> O(n) , Space O(1)
+*/
 #include <stdio.h>
 
 int find_duplicate(int arr[], int n) {

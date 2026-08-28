@@ -1,9 +1,11 @@
+// Modification in array is allowed (Works well because every element is between 0 to n-1)
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int find_duplicate(int arr[], int n) {
     for (int i = 0; i < n; i++) {
-        int index = abs(arr[i]);
+        int index = abs(arr[i]); // visit the node (even if its already visited, we need to check, hence use abs to avoid overflow)
 
         // If the value at index is already negative, it was visited before
         if (arr[index] < 0) {
