@@ -1,4 +1,4 @@
-//extra Space Allowed ($\mathcal{O}(n)$ Time, $\mathcal{O}(n)$ Space)
+//extra Space Allowed O(n) Time, O(n) Space
 
 #include <stdio.h>
 #include <stdlib.h>
